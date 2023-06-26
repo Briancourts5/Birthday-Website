@@ -119,8 +119,6 @@ for i in range(len(elephantFacts)):
 
     mydb.commit()
 
-print(cursor.rowcount, "record deleted.")
-
 cursor.execute("SELECT * FROM facts")
 
 result = cursor.fetchall()
@@ -130,12 +128,9 @@ for row in result:
 
 sql = "INSERT INTO facts (ID, fact) VALUES (%s, %s)"
 for val in elephantFacts:
-    # val = ("1", "Elephants are the world’s largest land mammal")
     cursor.execute(sql, val)
 
     mydb.commit()
-
-print(cursor.rowcount, "record inserted.")
 
 cursor.execute("SELECT * FROM facts")
 

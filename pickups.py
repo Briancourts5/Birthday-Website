@@ -119,8 +119,6 @@ for i in range(len(listOfLines)):
 
     mydb.commit()
 
-print(cursor.rowcount, "record deleted.")
-
 cursor.execute("SELECT * FROM pickupLines")
 
 result = cursor.fetchall()
@@ -130,12 +128,9 @@ for row in result:
 
 sql = "INSERT INTO pickupLines (ID, line) VALUES (%s, %s)"
 for val in listOfLines:
-    # val = ("1", "Elephants are the world’s largest land mammal")
     cursor.execute(sql, val)
 
     mydb.commit()
-
-print(cursor.rowcount, "record inserted.")
 
 cursor.execute("SELECT * FROM pickupLines")
 
