@@ -1,0 +1,64 @@
+.one {
+    background-color: lightgrey;
+    width: 48%;
+    float: left;
+    height: 300px;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.two {
+    background-color: rgb(255, 251, 32);
+    width: 48%;
+    float: left;
+    height: 300px;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.three {
+    background-color: rgb(80, 254, 112);
+    width: 48%;
+    float: left;
+    height: 300px;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.four {
+    background-color: rgb(193, 130, 218);
+    width: 48%;
+    float: left;
+    height: 300px;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.five {
+    background-color: rgb(134, 225, 255);
+    width: 48%;
+    float: left;
+    height: 300px;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.six {
+    background-color: rgb(255, 120, 239);
+    width: 48%;
+    float: left;
+    height: 300px;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+.centerText {
+    text-align: center;
+  }
