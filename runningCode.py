@@ -10,9 +10,10 @@ app = Flask(__name__, template_folder='templates', static_folder='static')
 def loadInformation():
     # position = random.randint(1, 100)
 
-    startDate = date(2023, 6, 24)
+    startDate = date(2023, 6, 27)
     currentDate = date.today()
     position = (currentDate - startDate).days + 1
+    position = position % 100
 
     mydb = mysql.connector.connect(
         host="localhost",
