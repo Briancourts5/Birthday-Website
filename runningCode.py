@@ -8,8 +8,6 @@ app = Flask(__name__, template_folder='templates', static_folder='static')
 
 @app.route('/')
 def loadInformation():
-    # position = random.randint(1, 100)
-
     startDate = date(2023, 6, 28)
     currentDate = date.today()
     position = (currentDate - startDate).days + 1
