@@ -112,19 +112,21 @@ print(mydb)
 
 cursor = mydb.cursor()
 
-for i in range(len(listOfFacts)):
-    sql = "DELETE FROM science WHERE ID = '" + str(i + 1) + "'"
+# for i in range(len(listOfFacts)):
+#     sql = "DELETE FROM science WHERE ID = '" + str(i + 1) + "'"
 
-    cursor.execute(sql)
+#     cursor.execute(sql)
 
-    mydb.commit()
+#     mydb.commit()
 
-cursor.execute("SELECT * FROM science")
+# cursor.execute("SELECT * FROM science")
 
-result = cursor.fetchall()
+# result = cursor.fetchall()
 
-for row in result:
-    print(row)
+# for row in result:
+#     print(row)
+
+cursor.execute("DELETE FROM science")
 
 sql = "INSERT INTO science (ID, fact) VALUES (%s, %s)"
 for val in listOfFacts:

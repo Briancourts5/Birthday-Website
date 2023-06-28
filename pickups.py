@@ -112,19 +112,21 @@ print(mydb)
 
 cursor = mydb.cursor()
 
-for i in range(len(listOfLines)):
-    sql = "DELETE FROM pickupLines WHERE ID = '" + str(i + 1) + "'"
+# for i in range(len(listOfLines)):
+#     sql = "DELETE FROM pickupLines WHERE ID = '" + str(i + 1) + "'"
 
-    cursor.execute(sql)
+#     cursor.execute(sql)
 
-    mydb.commit()
+#     mydb.commit()
 
-cursor.execute("SELECT * FROM pickupLines")
+# cursor.execute("SELECT * FROM pickupLines")
 
-result = cursor.fetchall()
+# result = cursor.fetchall()
 
-for row in result:
-    print(row)
+# for row in result:
+#     print(row)
+
+cursor.execute("DELETE FROM pickupLines")
 
 sql = "INSERT INTO pickupLines (ID, line) VALUES (%s, %s)"
 for val in listOfLines:

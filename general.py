@@ -112,19 +112,21 @@ print(mydb)
 
 cursor = mydb.cursor()
 
-for i in range(len(listOfFacts)):
-    sql = "DELETE FROM general WHERE ID = '" + str(i + 1) + "'"
+# for i in range(len(listOfFacts)):
+#     sql = "DELETE FROM general WHERE ID = '" + str(i + 1) + "'"
 
-    cursor.execute(sql)
+#     cursor.execute(sql)
 
-    mydb.commit()
+#     mydb.commit()
 
-cursor.execute("SELECT * FROM general")
+# cursor.execute("SELECT * FROM general")
 
-result = cursor.fetchall()
+# result = cursor.fetchall()
 
-for row in result:
-    print(row)
+# for row in result:
+#     print(row)
+
+cursor.execute("DELETE FROM general")
 
 sql = "INSERT INTO general (ID, fact) VALUES (%s, %s)"
 for val in listOfFacts:

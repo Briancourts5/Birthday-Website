@@ -112,19 +112,21 @@ print(mydb)
 
 cursor = mydb.cursor()
 
-for i in range(len(listOfJokes)):
-    sql = "DELETE FROM jokes WHERE ID = '" + str(i + 1) + "'"
+# for i in range(len(listOfJokes)):
+#     sql = "DELETE FROM jokes WHERE ID = '" + str(i + 1) + "'"
 
-    cursor.execute(sql)
+#     cursor.execute(sql)
 
-    mydb.commit()
+#     mydb.commit()
 
-cursor.execute("SELECT * FROM jokes")
+# cursor.execute("SELECT * FROM jokes")
 
-result = cursor.fetchall()
+# result = cursor.fetchall()
 
-for row in result:
-    print(row)
+# for row in result:
+#     print(row)
+
+cursor.execute("DELETE FROM jokes")
 
 sql = "INSERT INTO jokes (ID, joke) VALUES (%s, %s)"
 for val in listOfJokes:

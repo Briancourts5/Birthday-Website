@@ -112,19 +112,21 @@ print(mydb)
 
 cursor = mydb.cursor()
 
-for i in range(len(elephantFacts)):
-    sql = "DELETE FROM facts WHERE ID = '" + str(i + 1) + "'"
+# for i in range(len(elephantFacts)):
+#     sql = "DELETE FROM facts WHERE ID = '" + str(i + 1) + "'"
 
-    cursor.execute(sql)
+#     cursor.execute(sql)
 
-    mydb.commit()
+#     mydb.commit()
 
-cursor.execute("SELECT * FROM facts")
+# cursor.execute("SELECT * FROM facts")
 
-result = cursor.fetchall()
+# result = cursor.fetchall()
 
-for row in result:
-    print(row)
+# for row in result:
+#     print(row)
+
+cursor.execute("DELETE FROM facts")
 
 sql = "INSERT INTO facts (ID, fact) VALUES (%s, %s)"
 for val in elephantFacts:
