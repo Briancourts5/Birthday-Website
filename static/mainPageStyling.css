@@ -1,55 +1,43 @@
-.one {
+.box {
+    height: 300px;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.box .one {
     background-color: lightgrey;
     width: 48%;
     float: left;
-    height: 300px;
-    border-radius: 25px;
-    padding: 10px;
 }
 
-.two {
+.box .two {
     background-color: rgb(255, 251, 32);
     width: 48%;
     float: left;
-    height: 300px;
-    border-radius: 25px;
-    padding: 10px;
 }
 
-.three {
+.box .three {
     background-color: rgb(80, 254, 112);
     width: 48%;
     float: left;
-    height: 300px;
-    border-radius: 25px;
-    padding: 10px;
 }
 
-.four {
+.box .four {
     background-color: rgb(193, 130, 218);
     width: 48%;
     float: left;
-    height: 300px;
-    border-radius: 25px;
-    padding: 10px;
 }
 
-.five {
+.box .five {
     background-color: rgb(134, 225, 255);
     width: 48%;
     float: left;
-    height: 300px;
-    border-radius: 25px;
-    padding: 10px;
 }
 
-.six {
+.box .six {
     background-color: rgb(255, 120, 239);
     width: 48%;
     float: left;
-    height: 300px;
-    border-radius: 25px;
-    padding: 10px;
 }
 
 .center {
