@@ -7,7 +7,7 @@ app = Flask(__name__, template_folder='templates', static_folder='static')
 
 @app.route('/')
 def loadInformation():
-    startDate = date(2023, 6, 28)
+    startDate = date(2023, 6, 29)
     currentDate = date.today()
     position = (currentDate - startDate).days + 1
     position = position % 100
@@ -23,27 +23,27 @@ def loadInformation():
 
     cursor.execute("SELECT fact FROM facts WHERE id = " + str(position))
     elephantFact = cursor.fetchone()
-    elephantFact = ["Elephant Fact:", elephantFact[0]]
+    elephantFact = ["Elephant Fact: ", elephantFact[0]]
 
     cursor.execute("SELECT joke FROM jokes WHERE id = " + str(position))
     badJoke = cursor.fetchone()
-    badJoke = ["Joke:", badJoke[0]]
+    badJoke = ["Joke: ", badJoke[0]]
 
     cursor.execute("SELECT line FROM pickupLines WHERE id = " + str(position))
     pickupLine = cursor.fetchone()
-    pickupLine = ["Pickup Line:", pickupLine[0]]
+    pickupLine = ["Pickup Line: ", pickupLine[0]]
 
     cursor.execute("SELECT fact FROM science WHERE id = " + str(position))
     scienceFact = cursor.fetchone()
-    scienceFact = ["Science Fact:", scienceFact[0]]
+    scienceFact = ["Science Fact: ", scienceFact[0]]
 
     cursor.execute("SELECT fact FROM general WHERE id = " + str(position))
     generalFact = cursor.fetchone()
-    generalFact = ["General Fact:", generalFact[0]]
+    generalFact = ["General Fact: ", generalFact[0]]
 
     cursor.execute("SELECT translation FROM love WHERE id = " + str(position))
     loveTranslation = cursor.fetchone()
-    loveTranslation = ["I Love You:", loveTranslation[0]]
+    loveTranslation = ["I Love You: ", loveTranslation[0]]
 
     elephantPath = "static/elephant" + str(position) + ".jpg"
 
