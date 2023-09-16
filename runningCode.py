@@ -37,7 +37,7 @@ def loadInformation():
     scienceFact = cursor.fetchone()
     scienceFact = ["Science Fact: ", scienceFact[0]]
 
-    cursor.execute("SELECT fact FROM general WHERE id = " + str(position))
+    cursor.execute("SELECT fact FROM general WHERE id = " + str(176))
     generalFact = cursor.fetchone()
     generalFact = ["General Fact: ", generalFact[0]]
 
