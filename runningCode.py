@@ -46,7 +46,6 @@ def loadInformation():
         elephantIndex = numberOfElephantFacts
     cursor.execute("SELECT fact FROM facts WHERE id = " + str(elephantIndex))
     elephantFact = cursor.fetchone()
-    print(elephantFact)
     elephantFact = ["Elephant Fact: ", elephantFact[0]]
 
     badJokeIndex = position % numberOfJokes
