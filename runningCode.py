@@ -40,27 +40,47 @@ def loadInformation():
     cursor.execute("SELECT COUNT(ID) FROM love")
     numberOfLoveTranslations = int(cursor.fetchone()[0])
 
-    cursor.execute("SELECT fact FROM facts WHERE id = " + str(position % numberOfElephantFacts))
+
+    elephantIndex = position % numberOfElephantFacts
+    if elephantIndex == 0:
+        elephantIndex = numberOfElephantFacts
+    cursor.execute("SELECT fact FROM facts WHERE id = " + str(elephantIndex))
     elephantFact = cursor.fetchone()
+    print(elephantFact)
     elephantFact = ["Elephant Fact: ", elephantFact[0]]
 
-    cursor.execute("SELECT joke FROM jokes WHERE id = " + str(position % numberOfJokes))
+    badJokeIndex = position % numberOfJokes
+    if badJokeIndex == 0:
+        badJokeIndex = numberOfJokes
+    cursor.execute("SELECT joke FROM jokes WHERE id = " + str(badJokeIndex))
     badJoke = cursor.fetchone()
     badJoke = ["Joke: ", badJoke[0]]
 
-    cursor.execute("SELECT line FROM pickupLines WHERE id = " + str(position % numberOfPickupLines))
+    pickupLineIndex = position % numberOfPickupLines
+    if pickupLineIndex == 0:
+        pickupLineIndex = numberOfPickupLines
+    cursor.execute("SELECT line FROM pickupLines WHERE id = " + str(pickupLineIndex))
     pickupLine = cursor.fetchone()
     pickupLine = ["Pickup Line: ", pickupLine[0]]
 
-    cursor.execute("SELECT fact FROM science WHERE id = " + str(position % numberOfScienceFacts))
+    scienceFactIndex = position % numberOfScienceFacts
+    if scienceFactIndex == 0:
+        scienceFactIndex = numberOfScienceFacts
+    cursor.execute("SELECT fact FROM science WHERE id = " + str(scienceFactIndex))
     scienceFact = cursor.fetchone()
     scienceFact = ["Science Fact: ", scienceFact[0]]
 
-    cursor.execute("SELECT fact FROM general WHERE id = " + str(position % numberOfGeneralFacts))
+    generalFactIndex = position % numberOfGeneralFacts
+    if generalFactIndex == 0:
+        generalFactIndex = numberOfGeneralFacts
+    cursor.execute("SELECT fact FROM general WHERE id = " + str(generalFactIndex))
     generalFact = cursor.fetchone()
     generalFact = ["General Fact: ", generalFact[0]]
 
-    cursor.execute("SELECT translation FROM love WHERE id = " + str(position % numberOfLoveTranslations))
+    loveIndex = position % numberOfLoveTranslations
+    if loveIndex == 0:
+        loveIndex = numberOfLoveTranslations
+    cursor.execute("SELECT translation FROM love WHERE id = " + str(loveIndex))
     loveTranslation = cursor.fetchone()
     loveTranslation = ["I Love You: ", loveTranslation[0]]
 
